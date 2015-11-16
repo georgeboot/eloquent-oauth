@@ -33,9 +33,9 @@ class Authenticator
     {
         if ($this->identities->userExists($provider, $details)) {
             return $this->getExistingUser($provider, $details);
-        } elseif ($this->users->userExists($details)) {
+        } /*elseif ($this->users->userExists($details)) {
             return $this->users->getExistingUser($details);
-        }
+        }*/
         return $this->users->create();
     }
 
